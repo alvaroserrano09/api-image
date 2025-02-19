@@ -19,7 +19,6 @@ export class MongoTasksRepository implements TaskRepository {
     async getTaskById(taskId: string): Promise<Task | void> {
         try{
             const task = await TaskModel.findOne({ taskId });
-            console.log('task', task);
             if (!task) {
                 return ;
         }
