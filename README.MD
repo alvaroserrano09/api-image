@@ -32,7 +32,7 @@ docker compose --profile=dev up -d --build
 To enter the development container and run commands:
 
 ```bash
-docker compose exec api-images bash
+docker compose exec api-image bash
 ```
 
 Once inside, you can start the application with:
@@ -72,11 +72,11 @@ If you prefer to run the application locally , follow these steps:
    npm run dev
    ```
 
-- The application will be running on **Port: 3001**.
 
 ## 3. **Run Tests**
 
-### Unit Tests (Run Locally)
+
+### Unit Tests
 
 ```bash
 npm run test
@@ -87,6 +87,6 @@ npm run test
 To run integration tests, ensure the application and database are running, then execute:
 
 ```bash
-newman run api/postman/collection/api-image.postman_collection.json -e api/postman/environment/api-image.enviroment.postman_environment.json
+npm run test:integration
 ```
 
