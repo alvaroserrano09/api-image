@@ -1,6 +1,6 @@
 import { Task } from "../domain/models/task.model";
 import { MongoTasksRepository } from "../infrastructure/mongo/mongo-tasks.repository";
-import { SaveTaskTUseCase } from "../application/usecases/save-task.usecase";
+import { SaveTaskUseCase } from "../application/usecases/save-task.usecase";
 import { TASK_EXAMPLE } from "./task.object-mother";
 import { GetTaskUseCase } from "../application/usecases/get-task.usecase";
 

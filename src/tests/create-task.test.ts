@@ -1,6 +1,6 @@
 import { Task } from "../domain/models/task.model";
 import { MongoTasksRepository } from "../infrastructure/mongo/mongo-tasks.repository";
-import { SaveTaskTUseCase } from "../application/usecases/save-task.usecase";
+import { SaveTaskUseCase } from "../application/usecases/save-task.usecase";
 import { TASK_EXAMPLE } from "./task.object-mother";
 
 describe("Create Task", () => {
@@ -12,8 +12,8 @@ describe("Create Task", () => {
       .spyOn(taskRepository, "save")
       .mockImplementation(async (task: Task) => TASK_EXAMPLE);
 
-    const saveTaskTUseCase = new SaveTaskTUseCase(taskRepository);
-    const task = await saveTaskTUseCase.execute(input);
+    const saveTaskUseCase = new SaveTaskUseCase(taskRepository);
+    const task = await saveTaskUseCase.execute(input);
 
     expect(createTaskSpy).toHaveBeenCalled();
     expect(task).toBe(TASK_EXAMPLE);

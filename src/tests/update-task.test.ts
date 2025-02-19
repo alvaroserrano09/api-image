@@ -7,7 +7,7 @@ import { TaskService } from "../domain/services/task.service";
 describe("updateTask", () => {
   it("should update the task with new data", async () => {
     const input = "57c972f6-0678-4ffa-b7a3-f56b3a0fac3c";
-    const inputPath = "./input/Vector.png";
+    const inputPath = "./input/imagen.jpg";
     const taskRepository = new MongoTasksRepository();
     const taskService = new TaskService();
     jest

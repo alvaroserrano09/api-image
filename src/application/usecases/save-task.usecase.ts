@@ -1,7 +1,7 @@
 import { Task } from "../../domain/models/task.model";
 import { TaskRepository } from "../../domain/repositories/task.repository";
 
-export class SaveTaskTUseCase {
+export class SaveTaskUseCase {
   constructor(private taskRepository: TaskRepository) {}
 
   async execute(path: string): Promise<Task | void> {

@@ -1,5 +1,5 @@
 import { Response, Request } from "express";
-import { SaveTaskTUseCase } from "../../application/usecases/save-task.usecase";
+import { SaveTaskUseCase } from "../../application/usecases/save-task.usecase";
 import { MongoTasksRepository } from "../mongo/mongo-tasks.repository";
 import { GetTaskUseCase } from "../../application/usecases/get-task.usecase";
 import { UpdateTaskUseCase } from "../../application/usecases/update-task.usecase";
@@ -7,9 +7,9 @@ import { UpdateTaskUseCase } from "../../application/usecases/update-task.usecas
 export const postTask = async (req: Request, res: Response) => {
   try {
     const path = req.body.path;
-    const saveTaskTUseCase = new SaveTaskTUseCase(new MongoTasksRepository());
+    const saveTaskUseCase = new SaveTaskUseCase(new MongoTasksRepository());
     const updateTaskUseCase = new UpdateTaskUseCase(new MongoTasksRepository());
-    const taskCreated = await saveTaskTUseCase.execute(path);
+    const taskCreated = await saveTaskUseCase.execute(path);
 
     if (!taskCreated) {
       res.status(404).send({ error: "Task not found" });
