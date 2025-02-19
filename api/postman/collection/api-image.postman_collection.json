@@ -1,7 +1,7 @@
 {
 	"info": {
 		"_postman_id": "62b8cd1b-8c5a-4834-b12e-ec5263afa1bb",
-		"name": "api-image",
+		"name": "Amanda",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "39080545"
 	},
@@ -19,7 +19,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n \n      \"path\": \"/output/image1/1024/f322b730b2322387da77e1c519c7ffef4fc2.jpg\"\n    \n}",
+									"raw": "{\n \n      \"path\": \"https://www.eniun.com/wp-content/uploads/como-hacer-imagenes-accesibles-960x480.png\"\n    \n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -62,7 +62,7 @@
 									"variable": [
 										{
 											"key": "taskId",
-											"value": "3ccaa0f4-afbc-42e1-96a2-d71b5e81a9aa"
+											"value": "65d4a54b89c5e342b2c2c5f6"
 										}
 									]
 								}
@@ -87,7 +87,7 @@
 									"variable": [
 										{
 											"key": "taskId",
-											"value": "\"823e5240-deb3-4198-be4b-fa06c2bb7554"
+											"value": "1f284e04-02b8-490a-b743-3897e98a9a7c"
 										}
 									]
 								}
