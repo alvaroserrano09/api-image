@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="api-image" tests="3" time="0.216">
-  <testsuite name="Tasks / UseCase- Save Tasks / 001- Valid Request - Success" id="84d99471-08ce-4bbb-9a45-e10972b2b4d9" timestamp="2025-02-19T11:15:59.764Z" tests="0" failures="0" errors="0" time="0.126"/>
-  <testsuite name="Tasks / UseCase- Get tasks / 001- Valid Request- Success" id="b6bc0625-41df-47ea-8c50-b61b8d04d63a" timestamp="2025-02-19T11:15:59.764Z" tests="0" failures="0" errors="0" time="0.069"/>
-  <testsuite name="Tasks / UseCase- Get tasks / 002 - Invalid Tasks Id - TaskIdNotFoundException" id="89209c2d-3280-48ae-a740-c418f1c694fa" timestamp="2025-02-19T11:15:59.764Z" tests="0" failures="0" errors="0" time="0.021"/>
-</testsuites>
