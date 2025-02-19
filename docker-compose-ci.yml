@@ -9,11 +9,8 @@ services:
     depends_on:
       mongodb:
         condition: service_started
-    ports:
-      - 3001:3000
-      - 9229:9229
     environment:
-      - PORT=3000
+      - PORT=3001
       - MONGO_URI=mongodb://admin:admin@mongodb:27017/api-image?authSource=admin
     volumes:
       - .:/workspace:cached
@@ -27,6 +24,9 @@ services:
       context: .
       dockerfile: Dockerfile.dev
     working_dir: /workspace
+    depends_on:
+      api-image:
+        condition: service_started
     networks:
       - network-api-image
     command: "newman run api/postman/collection/api-image.postman_collection.json -e api/postman/environment/api-image.enviroment.postman_environment.json --reporters htmlextra,cli,junit --reporter-htmlextra-export newman/report.html --reporter-junit-export newman/report.xml"
