@@ -1,0 +1,20 @@
+FROM node:18-bullseye-slim
+
+RUN apt-get update \
+    && rm -rf /var/lib/apt/lists/*
+
+RUN unlink /etc/localtime && \
+    ln -s /usr/share/zoneinfo/UTC /etc/localtime && \
+    dpkg-reconfigure -f noninteractive tzdata
+
+WORKDIR /workspace
+
+COPY . .
+
+EXPOSE 3000
+
+RUN npm cache clean --force
+RUN npm install
+RUN npm install -g newman@5.3.0 newman-reporter-htmlextra@1.19.0
+
+

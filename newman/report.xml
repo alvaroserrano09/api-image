@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="api-image" tests="3" time="0.000">
+  <testsuite name="Tasks / UseCase- Save Tasks / 001- Valid Request - Success" id="b89d0b40-0028-446f-9b49-35802224d23d" timestamp="2025-02-19T09:41:58.722Z" tests="0" failures="0" errors="1" time="0.000">
+    <system-err><![CDATA[Iteration: 0
+RequestError: Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1555:16)
+
+---
+]]></system-err>
+  </testsuite>
+  <testsuite name="Tasks / UseCase- Get tasks / 001- Valid Request- Success" id="3f2fa857-9f8c-44b9-83c5-569750344c9c" timestamp="2025-02-19T09:41:58.722Z" tests="0" failures="0" errors="1" time="0.000">
+    <system-err><![CDATA[Iteration: 0
+RequestError: Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1555:16)
+
+---
+]]></system-err>
+  </testsuite>
+  <testsuite name="Tasks / UseCase- Get tasks / 002 - Invalid Tasks Id - TaskIdNotFoundException" id="0fe30807-0e40-4e25-96c5-a89e36fb6d43" timestamp="2025-02-19T09:41:58.722Z" tests="0" failures="0" errors="1" time="0.000">
+    <system-err><![CDATA[Iteration: 0
+RequestError: Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1555:16)
+
+---
+]]></system-err>
+  </testsuite>
+</testsuites>

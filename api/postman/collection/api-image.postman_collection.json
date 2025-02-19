@@ -1,0 +1,102 @@
+{
+	"info": {
+		"_postman_id": "62b8cd1b-8c5a-4834-b12e-ec5263afa1bb",
+		"name": "api-image",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39080545"
+	},
+	"item": [
+		{
+			"name": "Tasks",
+			"item": [
+				{
+					"name": "UseCase- Save Tasks",
+					"item": [
+						{
+							"name": "001- Valid Request - Success",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n \n      \"path\": \"/output/image1/1024/f322b730b2322387da77e1c519c7ffef4fc2.jpg\"\n    \n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/v1/tasks",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1",
+										"tasks"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "UseCase- Get tasks",
+					"item": [
+						{
+							"name": "001- Valid Request- Success",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/v1/tasks/:taskId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1",
+										"tasks",
+										":taskId"
+									],
+									"variable": [
+										{
+											"key": "taskId",
+											"value": "3ccaa0f4-afbc-42e1-96a2-d71b5e81a9aa"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "002 - Invalid Tasks Id - TaskIdNotFoundException",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/v1/tasks/:taskId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1",
+										"tasks",
+										":taskId"
+									],
+									"variable": [
+										{
+											"key": "taskId",
+											"value": "\"823e5240-deb3-4198-be4b-fa06c2bb7554"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
