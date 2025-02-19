@@ -18,28 +18,28 @@ Make sure you have the following programs installed on your system:
 
 # 🚀 Getting Started
 
-## 1. **Run Application**
+## **Run Application**
 
 ### Inside Dev Container
 
-Run the following command to start the development containers:
+1. Run the following command to start the development containers:
 
-```bash
-docker compose --profile=dev up -d --build
-```
-- All commands should be executed **inside the container**.
+   ```bash
+   docker compose --profile=dev up -d --build
+   ```
+    All commands should be executed **inside the container**.
 
-To enter the development container and run commands:
+2. To enter the development container and run commands:
 
-```bash
-docker compose exec api-image bash
-```
+   ```bash
+   docker compose exec api-image bash
+   ```
 
-Once inside, you can start the application with:
+3. Once inside, you can start the application with:
 
-```bash
-npm run dev
-```
+   ```bash
+   npm run dev
+   ```
 
 The application will be running on **Port: 3001**.
 
@@ -73,9 +73,8 @@ If you prefer to run the application locally , follow these steps:
    ```
 
 
-## 3. **Run Tests**
-
-
+## **Run Tests**
+The following test commands can be executed both inside and outside the development container.
 ### Unit Tests
 
 ```bash
